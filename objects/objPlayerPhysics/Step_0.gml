@@ -1,0 +1,1 @@
+physics_apply_force(0, 0, 0, -40 * phy_mass)

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"musGuyRock",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "channelFormat":1,
+  "compression":3,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":190.45877,
+  "exportDir":"",
+  "name":"musGuyRock",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":5512,
+  "soundFile":"musGuyRock",
+  "volume":0.5,
+}

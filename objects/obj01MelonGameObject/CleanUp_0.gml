@@ -1,0 +1,1 @@
+with (ins_mask) instance_destroy()

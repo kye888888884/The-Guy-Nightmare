@@ -1,0 +1,1 @@
+phy = instance_create(objPlayerPhysics, x, y)
