@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Melon",
-    "path":"folders/Objects/Stage01/Melon.yy",
+    "path":"folders/Objects/Themes/Stage01/Melon.yy",
   },
   "parentObjectId":null,
   "persistent":false,

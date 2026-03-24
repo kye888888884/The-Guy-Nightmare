@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureGroup>
   <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="1024">default_0.bz2</texture>
-  <texture scale="1" mipsToGenerate="0" texwidth="800" texheight="800">default_1.bz2</texture>
-  <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="512">default_2.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="1024">default_1.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="800" texheight="800">default_2.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="512">default_3.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="512">default_4.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="512" texheight="512">default_5.bz2</texture>
@@ -14,9 +14,9 @@
   <texture scale="1" mipsToGenerate="0" texwidth="32" texheight="32">default_11.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="32" texheight="32">default_12.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="32" texheight="32">default_13.bz2</texture>
-  <tpe x="0" y="0" tpage="default_0.bz2">sprTextureMoon_Nightmare_2f04c809-d8db-45f1-b2bc-11b9ac1d4a8d.tpe</tpe>
-  <tpe x="0" y="0" tpage="default_1.bz2">sprPerlinString_Nightmare_cee4484c-36ad-4e16-8bb0-9e3b83ec2870.tpe</tpe>
-  <tpe x="0" y="0" tpage="default_2.bz2">sprTextureMoonMap_Nightmare_054fbf89-a9f8-4a80-ba43-09a73134626e.tpe</tpe>
+  <tpe x="0" y="0" tpage="default_0.bz2">sprTextureMoon_Nightmare_23dce21c-6373-4bfb-8095-b3784a4b26df.tpe</tpe>
+  <tpe x="0" y="0" tpage="default_1.bz2">sprTextureMoon_Nightmare_c11d0a23-38fe-4723-9e90-611dff095b43.tpe</tpe>
+  <tpe x="0" y="0" tpage="default_2.bz2">sprPerlinString_Nightmare_cee4484c-36ad-4e16-8bb0-9e3b83ec2870.tpe</tpe>
   <tpe x="0" y="0" tpage="default_3.bz2">sprTextureMoonMap_Nightmare_7b2fbc8f-8b45-4f07-b10d-d0bbc9e173f8.tpe</tpe>
   <tpe x="0" y="0" tpage="default_4.bz2">sprTextureMoonMap_Nightmare_ef14c156-ea08-45fc-a1f9-0b4a85742d0b.tpe</tpe>
   <tpe x="0" y="0" tpage="default_5.bz2">sprTextureApple_Nightmare_1d776f12-7831-4c7b-8a70-91e0f868c642.tpe</tpe>
@@ -108,49 +108,56 @@
   <tpe x="356" y="1178" tpage="default_8.bz2">sprCameraTouchArea_Nightmare_710f6e28-781c-48aa-8eec-e1bbb13aecf9.tpe</tpe>
   <tpe x="721" y="323" tpage="default_8.bz2">sprKillerBlock_Nightmare_40eb1ab6-a928-4e47-ba2c-bc8f4f25ecfe.tpe</tpe>
   <tpe x="0" y="0" tpage="default_12.bz2">sprMetalBlock_Nightmare_e274d2f4-712d-49ec-8b18-2ffa77bdb00a.tpe</tpe>
+  <tpe x="0" y="0" tpage="default_13.bz2">sprPriBlock_Nightmare_55e4ffb4-f249-44f3-a628-328f86226ae8.tpe</tpe>
+  <tpe x="702" y="641" tpage="default_8.bz2">sprPriSlopeDig_Nightmare_3e19e19a-fafa-499e-a9e5-f0e32d0ad98b.tpe</tpe>
+  <tpe x="604" y="683" tpage="default_8.bz2">sprPriSlopeDig_Nightmare_b0727a3b-1bf9-46e9-8f53-c55d2498f6bf.tpe</tpe>
+  <tpe x="941" y="694" tpage="default_8.bz2">sprPriSpike_Nightmare_3cd93fa8-908c-4a03-b9fd-47462f4c2fae.tpe</tpe>
+  <tpe x="862" y="829" tpage="default_8.bz2">sprPriSpike_Nightmare_c6b50262-c891-4161-a318-95b9012bcc50.tpe</tpe>
+  <tpe x="941" y="694" tpage="default_8.bz2">sprPriSpikeMiddleBottom_Nightmare_3cd93fa8-908c-4a03-b9fd-47462f4c2fae.tpe</tpe>
+  <tpe x="862" y="829" tpage="default_8.bz2">sprPriSpikeMiddleBottom_Nightmare_c6b50262-c891-4161-a318-95b9012bcc50.tpe</tpe>
   <tpe x="0" y="0" tpage="default_13.bz2">sprRect_Nightmare_55e4ffb4-f249-44f3-a628-328f86226ae8.tpe</tpe>
-  <tpe x="702" y="641" tpage="default_8.bz2">sprSaveBlocker_Nightmare_a571a153-7b67-4e8c-bc3f-6cabc9006cdd.tpe</tpe>
-  <tpe x="604" y="683" tpage="default_8.bz2">sprSecretItem_Nightmare_7d52040b-47cd-47f6-beff-c50c9e36ef8c.tpe</tpe>
-  <tpe x="941" y="694" tpage="default_8.bz2">sprSlideBlock_Nightmare_7ada0392-4b01-43a2-a347-195fc240f3ff.tpe</tpe>
-  <tpe x="862" y="829" tpage="default_8.bz2">sprSlideBlockL_Nightmare_2e83acc8-f26b-4aef-8819-18978887e584.tpe</tpe>
-  <tpe x="805" y="865" tpage="default_8.bz2">sprSlideBlockR_Nightmare_3d3a79a9-7e12-4a49-828e-08c5909f2d0e.tpe</tpe>
-  <tpe x="904" y="730" tpage="default_8.bz2">sprSlipBlockMask_Nightmare_5f09179d-dace-4c26-b6f9-3473a7c6149a.tpe</tpe>
-  <tpe x="763" y="928" tpage="default_8.bz2">sprSlopeBlock_Nightmare_016b5771-48ba-4b8e-b31e-071e812d063b.tpe</tpe>
-  <tpe x="598" y="801" tpage="default_8.bz2">sprSlopeDownLeft_Nightmare_90bb31d4-f95c-4c05-908b-c769e13125fd.tpe</tpe>
-  <tpe x="562" y="837" tpage="default_8.bz2">sprSlopeDownRight_Nightmare_ed2b3cbb-2079-4324-94f3-7eda712af4cb.tpe</tpe>
-  <tpe x="356" y="1214" tpage="default_8.bz2">sprSlopeUpLeft_Nightmare_7ad0f4fd-408c-4664-8e81-60b12b149290.tpe</tpe>
-  <tpe x="689" y="677" tpage="default_8.bz2">sprSlopeUpRight_Nightmare_aae537e0-6f34-4515-adc1-fd3d73a6c713.tpe</tpe>
-  <tpe x="634" y="719" tpage="default_8.bz2">sprSpike_Nightmare_062834b9-9dbb-43d6-a64f-b6ab576c39d5.tpe</tpe>
-  <tpe x="595" y="719" tpage="default_8.bz2">sprSpikeDown_Nightmare_5ab709d9-cc62-4bbe-93ed-4125220c34b4.tpe</tpe>
-  <tpe x="977" y="694" tpage="default_8.bz2">sprSpikeLeft_Nightmare_2ccb118a-07cd-49d8-9277-e7add5e1c0aa.tpe</tpe>
-  <tpe x="898" y="801" tpage="default_8.bz2">sprSpikeRight_Nightmare_b31c9ecd-b80d-4e8d-9d09-16489968cee6.tpe</tpe>
-  <tpe x="841" y="865" tpage="default_8.bz2">sprSpikeTriggerDown_Nightmare_cbeb4251-6adf-4cd9-97db-c11b01e4197c.tpe</tpe>
-  <tpe x="799" y="901" tpage="default_8.bz2">sprSpikeTriggerLeft_Nightmare_471a2361-6630-4757-a53b-1c92f43cbf11.tpe</tpe>
-  <tpe x="940" y="730" tpage="default_8.bz2">sprSpikeTriggerRight_Nightmare_33aed1f0-b8a6-44de-acc2-cbaacf185c5f.tpe</tpe>
-  <tpe x="763" y="964" tpage="default_8.bz2">sprSpikeTriggerUp_Nightmare_0ca388b2-0fe6-4948-b4cd-0c1ea3ebf5d6.tpe</tpe>
-  <tpe x="634" y="719" tpage="default_8.bz2">sprSpikeUp_Nightmare_062834b9-9dbb-43d6-a64f-b6ab576c39d5.tpe</tpe>
-  <tpe x="598" y="837" tpage="default_8.bz2">sprTriggerMask_Nightmare_1ab54320-8768-46e2-a45d-828045cd8849.tpe</tpe>
-  <tpe x="725" y="677" tpage="default_8.bz2">sprWater_Nightmare_8ecc4ccc-9707-42ed-8dfc-b296efeea5e2.tpe</tpe>
-  <tpe x="604" y="755" tpage="default_8.bz2">sprSign_Nightmare_c337c1e4-058f-4d01-ae09-d5730966d7d4.tpe</tpe>
+  <tpe x="805" y="865" tpage="default_8.bz2">sprSaveBlocker_Nightmare_a571a153-7b67-4e8c-bc3f-6cabc9006cdd.tpe</tpe>
+  <tpe x="904" y="730" tpage="default_8.bz2">sprSecretItem_Nightmare_7d52040b-47cd-47f6-beff-c50c9e36ef8c.tpe</tpe>
+  <tpe x="763" y="928" tpage="default_8.bz2">sprSlideBlock_Nightmare_7ada0392-4b01-43a2-a347-195fc240f3ff.tpe</tpe>
+  <tpe x="598" y="801" tpage="default_8.bz2">sprSlideBlockL_Nightmare_2e83acc8-f26b-4aef-8819-18978887e584.tpe</tpe>
+  <tpe x="562" y="837" tpage="default_8.bz2">sprSlideBlockR_Nightmare_3d3a79a9-7e12-4a49-828e-08c5909f2d0e.tpe</tpe>
+  <tpe x="356" y="1214" tpage="default_8.bz2">sprSlipBlockMask_Nightmare_5f09179d-dace-4c26-b6f9-3473a7c6149a.tpe</tpe>
+  <tpe x="689" y="677" tpage="default_8.bz2">sprSlopeBlock_Nightmare_016b5771-48ba-4b8e-b31e-071e812d063b.tpe</tpe>
+  <tpe x="595" y="719" tpage="default_8.bz2">sprSlopeDownLeft_Nightmare_90bb31d4-f95c-4c05-908b-c769e13125fd.tpe</tpe>
+  <tpe x="977" y="694" tpage="default_8.bz2">sprSlopeDownRight_Nightmare_ed2b3cbb-2079-4324-94f3-7eda712af4cb.tpe</tpe>
+  <tpe x="898" y="801" tpage="default_8.bz2">sprSlopeUpLeft_Nightmare_7ad0f4fd-408c-4664-8e81-60b12b149290.tpe</tpe>
+  <tpe x="841" y="865" tpage="default_8.bz2">sprSlopeUpRight_Nightmare_aae537e0-6f34-4515-adc1-fd3d73a6c713.tpe</tpe>
+  <tpe x="898" y="837" tpage="default_8.bz2">sprSpike_Nightmare_062834b9-9dbb-43d6-a64f-b6ab576c39d5.tpe</tpe>
+  <tpe x="799" y="901" tpage="default_8.bz2">sprSpikeDown_Nightmare_5ab709d9-cc62-4bbe-93ed-4125220c34b4.tpe</tpe>
+  <tpe x="940" y="730" tpage="default_8.bz2">sprSpikeLeft_Nightmare_2ccb118a-07cd-49d8-9277-e7add5e1c0aa.tpe</tpe>
+  <tpe x="763" y="964" tpage="default_8.bz2">sprSpikeRight_Nightmare_b31c9ecd-b80d-4e8d-9d09-16489968cee6.tpe</tpe>
+  <tpe x="634" y="719" tpage="default_8.bz2">sprSpikeTriggerDown_Nightmare_cbeb4251-6adf-4cd9-97db-c11b01e4197c.tpe</tpe>
+  <tpe x="598" y="837" tpage="default_8.bz2">sprSpikeTriggerLeft_Nightmare_471a2361-6630-4757-a53b-1c92f43cbf11.tpe</tpe>
+  <tpe x="725" y="677" tpage="default_8.bz2">sprSpikeTriggerRight_Nightmare_33aed1f0-b8a6-44de-acc2-cbaacf185c5f.tpe</tpe>
+  <tpe x="604" y="755" tpage="default_8.bz2">sprSpikeTriggerUp_Nightmare_0ca388b2-0fe6-4948-b4cd-0c1ea3ebf5d6.tpe</tpe>
+  <tpe x="898" y="837" tpage="default_8.bz2">sprSpikeUp_Nightmare_062834b9-9dbb-43d6-a64f-b6ab576c39d5.tpe</tpe>
+  <tpe x="934" y="766" tpage="default_8.bz2">sprTriggerMask_Nightmare_1ab54320-8768-46e2-a45d-828045cd8849.tpe</tpe>
+  <tpe x="835" y="901" tpage="default_8.bz2">sprWater_Nightmare_8ecc4ccc-9707-42ed-8dfc-b296efeea5e2.tpe</tpe>
+  <tpe x="799" y="937" tpage="default_8.bz2">sprSign_Nightmare_c337c1e4-058f-4d01-ae09-d5730966d7d4.tpe</tpe>
   <tpe x="863" y="459" tpage="default_8.bz2">sprGravityDown_Nightmare_ffa87ee6-cd69-4118-a6df-34ae3b84daeb.tpe</tpe>
   <tpe x="991" y="427" tpage="default_8.bz2">sprGravityUp_Nightmare_658d4dd9-67ea-45d6-b2df-6be7e3676c9a.tpe</tpe>
-  <tpe x="898" y="837" tpage="default_8.bz2">sprSave_Nightmare_79e93544-c0d8-485f-b40a-f88b3ae7b0dc.tpe</tpe>
-  <tpe x="934" y="766" tpage="default_8.bz2">sprSave_Nightmare_b60387b1-f38f-40bb-a0d0-04af729cf135.tpe</tpe>
-  <tpe x="835" y="901" tpage="default_8.bz2">sprSaveFlip_Nightmare_07b18983-67ac-4f37-8a77-0298ffb51e0d.tpe</tpe>
-  <tpe x="799" y="937" tpage="default_8.bz2">sprSaveFlip_Nightmare_1f1e8a8b-63d4-4e13-8577-297c915871ec.tpe</tpe>
-  <tpe x="976" y="730" tpage="default_8.bz2">sprSaveMedium_Nightmare_726938ba-01df-4dc9-8829-24338822da67.tpe</tpe>
-  <tpe x="763" y="1000" tpage="default_8.bz2">sprSaveMedium_Nightmare_85bbda57-4697-4941-8d04-cd948d5214a7.tpe</tpe>
-  <tpe x="670" y="713" tpage="default_8.bz2">sprSaveMediumFlip_Nightmare_1dc97029-11c9-41de-83dd-56703ada9b21.tpe</tpe>
-  <tpe x="640" y="755" tpage="default_8.bz2">sprSaveMediumFlip_Nightmare_96e5ea6e-61e3-4447-bf67-3395c0ac0068.tpe</tpe>
-  <tpe x="991" y="463" tpage="default_8.bz2">sprSaveVHard_Nightmare_241bdf1e-7476-4363-a6f9-22a8533a2adc.tpe</tpe>
-  <tpe x="930" y="837" tpage="default_8.bz2">sprSaveVHard_Nightmare_af902a57-7188-40fd-999b-c60662f22a6e.tpe</tpe>
-  <tpe x="877" y="872" tpage="default_8.bz2">sprSaveVHardFlip_Nightmare_616fa561-6fa6-4905-ba22-71e6a3b12d91.tpe</tpe>
-  <tpe x="966" y="766" tpage="default_8.bz2">sprSaveVHardFlip_Nightmare_7edf4114-99a6-48a8-8fed-4d99bf7b586c.tpe</tpe>
+  <tpe x="976" y="730" tpage="default_8.bz2">sprSave_Nightmare_79e93544-c0d8-485f-b40a-f88b3ae7b0dc.tpe</tpe>
+  <tpe x="763" y="1000" tpage="default_8.bz2">sprSave_Nightmare_b60387b1-f38f-40bb-a0d0-04af729cf135.tpe</tpe>
+  <tpe x="670" y="713" tpage="default_8.bz2">sprSaveFlip_Nightmare_07b18983-67ac-4f37-8a77-0298ffb51e0d.tpe</tpe>
+  <tpe x="640" y="755" tpage="default_8.bz2">sprSaveFlip_Nightmare_1f1e8a8b-63d4-4e13-8577-297c915871ec.tpe</tpe>
+  <tpe x="634" y="791" tpage="default_8.bz2">sprSaveMedium_Nightmare_726938ba-01df-4dc9-8829-24338822da67.tpe</tpe>
+  <tpe x="877" y="873" tpage="default_8.bz2">sprSaveMedium_Nightmare_85bbda57-4697-4941-8d04-cd948d5214a7.tpe</tpe>
+  <tpe x="970" y="766" tpage="default_8.bz2">sprSaveMediumFlip_Nightmare_1dc97029-11c9-41de-83dd-56703ada9b21.tpe</tpe>
+  <tpe x="934" y="802" tpage="default_8.bz2">sprSaveMediumFlip_Nightmare_96e5ea6e-61e3-4447-bf67-3395c0ac0068.tpe</tpe>
+  <tpe x="835" y="937" tpage="default_8.bz2">sprSaveVHard_Nightmare_241bdf1e-7476-4363-a6f9-22a8533a2adc.tpe</tpe>
+  <tpe x="991" y="463" tpage="default_8.bz2">sprSaveVHard_Nightmare_af902a57-7188-40fd-999b-c60662f22a6e.tpe</tpe>
+  <tpe x="795" y="1000" tpage="default_8.bz2">sprSaveVHardFlip_Nightmare_616fa561-6fa6-4905-ba22-71e6a3b12d91.tpe</tpe>
+  <tpe x="702" y="713" tpage="default_8.bz2">sprSaveVHardFlip_Nightmare_7edf4114-99a6-48a8-8fed-4d99bf7b586c.tpe</tpe>
   <tpe x="356" y="1250" tpage="default_8.bz2">spr01MelonGameObjectsSize1_Nightmare_c9ceec3b-dce1-4bf0-8db3-f909b6f6a4bd.tpe</tpe>
-  <tpe x="835" y="936" tpage="default_8.bz2">spr01MelonGameObjectsSize1_Nightmare_ab2c473b-ab3c-4f85-85a4-f7be500c4b1e.tpe</tpe>
-  <tpe x="799" y="972" tpage="default_8.bz2">spr01MelonGameObjectsSize1_Nightmare_abb38ff3-f86c-423e-bf61-94b2480cb22f.tpe</tpe>
+  <tpe x="672" y="748" tpage="default_8.bz2">spr01MelonGameObjectsSize1_Nightmare_ab2c473b-ab3c-4f85-85a4-f7be500c4b1e.tpe</tpe>
+  <tpe x="634" y="826" tpage="default_8.bz2">spr01MelonGameObjectsSize1_Nightmare_abb38ff3-f86c-423e-bf61-94b2480cb22f.tpe</tpe>
   <tpe x="364" y="1994" tpage="default_8.bz2">sprPlayerStart_Nightmare_39ec7505-47c0-4df4-a1ed-dc96a20e9a88.tpe</tpe>
-  <tpe x="995" y="391" tpage="default_8.bz2">sprWarp_Nightmare_4a964e6f-ad0c-4595-9908-8cf0b8700f05.tpe</tpe>
+  <tpe x="904" y="766" tpage="default_8.bz2">sprWarp_Nightmare_4a964e6f-ad0c-4595-9908-8cf0b8700f05.tpe</tpe>
   <tpe x="1001" y="122" tpage="default_8.bz2">sprBossItem_Nightmare_b1ca60e3-2873-43fe-a946-948fab9bc965.tpe</tpe>
   <tpe x="692" y="439" tpage="default_8.bz2">res_pt_shape_line.tpe</tpe>
   <tpe x="655" y="557" tpage="default_8.bz2">spr01Handle_Nightmare_7e2b280b-9eec-49b5-b4a8-bb29f72bdb75.tpe</tpe>
@@ -162,80 +169,81 @@
   <tpe x="497" y="852" tpage="default_8.bz2">sprPlayerRun_Nightmare_dfae68ee-02e0-4fc2-98f5-bebb44562eac.tpe</tpe>
   <tpe x="525" y="765" tpage="default_8.bz2">spr01BlockPulley_Nightmare_007c5a96-150d-4e2d-b413-176ccd747a44.tpe</tpe>
   <tpe x="640" y="687" tpage="default_8.bz2">spr01BlockPulley_Nightmare_6f808434-49f6-408e-b73c-3f8179cf78c1.tpe</tpe>
-  <tpe x="702" y="713" tpage="default_8.bz2">spr01BlockPulley_Nightmare_d9509ecb-3344-41ac-a154-55fb5d4433c6.tpe</tpe>
-  <tpe x="634" y="790" tpage="default_8.bz2">spr01BlockPulley_Nightmare_feea4d0d-dd7f-46a4-826e-80873386bcae.tpe</tpe>
+  <tpe x="666" y="790" tpage="default_8.bz2">spr01BlockPulley_Nightmare_d9509ecb-3344-41ac-a154-55fb5d4433c6.tpe</tpe>
+  <tpe x="909" y="873" tpage="default_8.bz2">spr01BlockPulley_Nightmare_feea4d0d-dd7f-46a4-826e-80873386bcae.tpe</tpe>
   <tpe x="1004" y="589" tpage="default_8.bz2">spr01Pipe_Nightmare_12276dda-1bf0-4878-80e2-8a168736558a.tpe</tpe>
-  <tpe x="672" y="748" tpage="default_8.bz2">sprMovingPlatform_Nightmare_d05bab55-d3ff-492e-b9e6-beb73f3c37cc.tpe</tpe>
+  <tpe x="871" y="908" tpage="default_8.bz2">sprMovingPlatform_Nightmare_d05bab55-d3ff-492e-b9e6-beb73f3c37cc.tpe</tpe>
   <tpe x="738" y="605" tpage="default_8.bz2">sprTriggerButton_Nightmare_8cb50ba7-8acb-4a9b-bd1a-b3b96dbecac5.tpe</tpe>
   <tpe x="868" y="801" tpage="default_8.bz2">sprPlayerIdle_Nightmare_2b0189e2-1c4b-4e7d-906f-c083ed3a4e8f.tpe</tpe>
   <tpe x="863" y="495" tpage="default_8.bz2">sprPlayerFall_Nightmare_f85e5a28-841e-447f-9869-6b92bf747c96.tpe</tpe>
-  <tpe x="904" y="766" tpage="default_8.bz2">sprPlayerIdle_Nightmare_fc6191b1-efb2-4909-a73e-5e1a818756dc.tpe</tpe>
-  <tpe x="962" y="801" tpage="default_8.bz2">sprCherry_Nightmare_bc8d9421-6830-4d2e-bf91-7a20fc27b138.tpe</tpe>
-  <tpe x="909" y="872" tpage="default_8.bz2">sprPlayerFall_Nightmare_129ff4e7-e98b-4e0f-9540-4eeb20f33bd0.tpe</tpe>
-  <tpe x="867" y="907" tpage="default_8.bz2">sprCherry_Nightmare_ad2637ed-80ba-42dd-a139-9af5918953e6.tpe</tpe>
-  <tpe x="998" y="765" tpage="default_8.bz2">sprPlayerIdle_Nightmare_e629ce80-b069-40d5-bd3d-69ca82e6cae8.tpe</tpe>
-  <tpe x="831" y="968" tpage="default_8.bz2">sprPlayerIdle_Nightmare_d104d62a-ec59-4162-a03e-cf548ebe1e06.tpe</tpe>
+  <tpe x="995" y="391" tpage="default_8.bz2">sprPlayerIdle_Nightmare_fc6191b1-efb2-4909-a73e-5e1a818756dc.tpe</tpe>
+  <tpe x="970" y="801" tpage="default_8.bz2">sprCherry_Nightmare_bc8d9421-6830-4d2e-bf91-7a20fc27b138.tpe</tpe>
+  <tpe x="867" y="937" tpage="default_8.bz2">sprPlayerFall_Nightmare_129ff4e7-e98b-4e0f-9540-4eeb20f33bd0.tpe</tpe>
+  <tpe x="799" y="971" tpage="default_8.bz2">sprCherry_Nightmare_ad2637ed-80ba-42dd-a139-9af5918953e6.tpe</tpe>
+  <tpe x="827" y="972" tpage="default_8.bz2">sprPlayerIdle_Nightmare_e629ce80-b069-40d5-bd3d-69ca82e6cae8.tpe</tpe>
+  <tpe x="734" y="713" tpage="default_8.bz2">sprPlayerIdle_Nightmare_d104d62a-ec59-4162-a03e-cf548ebe1e06.tpe</tpe>
   <tpe x="568" y="438" tpage="default_8.bz2">sprWalljumpL_Nightmare_66b33650-d963-4bad-bc7a-7fbb34df57d4.tpe</tpe>
-  <tpe x="795" y="1004" tpage="default_8.bz2">sprWalljumpR_Nightmare_b51fc4ec-c6e8-44bf-9111-3b9be77199cd.tpe</tpe>
-  <tpe x="171" y="2021" tpage="default_8.bz2">sprPlayerSlide_Nightmare_c5bcf2f7-38ad-459e-8914-3655864271f0.tpe</tpe>
+  <tpe x="1008" y="730" tpage="default_8.bz2">sprWalljumpR_Nightmare_b51fc4ec-c6e8-44bf-9111-3b9be77199cd.tpe</tpe>
+  <tpe x="704" y="748" tpage="default_8.bz2">sprPlayerSlide_Nightmare_c5bcf2f7-38ad-459e-8914-3655864271f0.tpe</tpe>
   <tpe x="1001" y="158" tpage="default_8.bz2">sprPlayerSlide_Nightmare_96cfe5cf-2a5c-4483-886d-002cc62ac737.tpe</tpe>
-  <tpe x="526" y="852" tpage="default_8.bz2">spr01Handle_Nightmare_546a1646-18c3-4d37-b9ee-0522332a686d.tpe</tpe>
-  <tpe x="526" y="852" tpage="default_8.bz2">spr01Pulley_Nightmare_546a1646-18c3-4d37-b9ee-0522332a686d.tpe</tpe>
+  <tpe x="171" y="2021" tpage="default_8.bz2">spr01Handle_Nightmare_546a1646-18c3-4d37-b9ee-0522332a686d.tpe</tpe>
+  <tpe x="171" y="2021" tpage="default_8.bz2">spr01Pulley_Nightmare_546a1646-18c3-4d37-b9ee-0522332a686d.tpe</tpe>
   <tpe x="905" y="661" tpage="default_8.bz2">sprPlayerJump_Nightmare_ee3ea4ca-442b-4f2f-9c42-d577fc0c1db6.tpe</tpe>
-  <tpe x="458" y="855" tpage="default_8.bz2">spr01Pipe_Nightmare_2f97e645-e780-455a-8a2f-6311622cafce.tpe</tpe>
-  <tpe x="738" y="713" tpage="default_8.bz2">spr01Pipe_Nightmare_70e4daff-c358-4fc1-bb5e-5f041d321645.tpe</tpe>
-  <tpe x="670" y="790" tpage="default_8.bz2">spr01Pipe_Nightmare_d06ff1bf-59fc-4726-ba73-3c252161c38b.tpe</tpe>
-  <tpe x="738" y="641" tpage="default_8.bz2">spr01Pipe_Nightmare_ed20beb9-eb27-4e4a-b3f4-46854bc3a161.tpe</tpe>
-  <tpe x="1004" y="625" tpage="default_8.bz2">sprPlayerJump_Nightmare_f4b29d1c-6feb-43a6-ab6f-5862aa7caf5c.tpe</tpe>
-  <tpe x="1005" y="498" tpage="default_8.bz2">spr01Pulley_Nightmare_06e68040-5341-4f74-8cf5-8b5d6eaa98a4.tpe</tpe>
-  <tpe x="986" y="801" tpage="default_8.bz2">sprPlayerBack_Nightmare_5f1b0033-5f3c-445a-b03c-7b347b6be5dd.tpe</tpe>
-  <tpe x="962" y="829" tpage="default_8.bz2">sprPlayerBack_Nightmare_65314ec9-4dd6-48f0-b76f-3a4316eb48a1.tpe</tpe>
-  <tpe x="937" y="872" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_217b47d4-01e3-4446-b511-d892e653e87c.tpe</tpe>
-  <tpe x="909" y="896" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_65aebd36-a866-4d55-83a5-cf8a3b7fc07a.tpe</tpe>
+  <tpe x="526" y="852" tpage="default_8.bz2">spr01Pipe_Nightmare_2f97e645-e780-455a-8a2f-6311622cafce.tpe</tpe>
+  <tpe x="458" y="855" tpage="default_8.bz2">spr01Pipe_Nightmare_70e4daff-c358-4fc1-bb5e-5f041d321645.tpe</tpe>
+  <tpe x="666" y="810" tpage="default_8.bz2">spr01Pipe_Nightmare_d06ff1bf-59fc-4726-ba73-3c252161c38b.tpe</tpe>
+  <tpe x="702" y="780" tpage="default_8.bz2">spr01Pipe_Nightmare_ed20beb9-eb27-4e4a-b3f4-46854bc3a161.tpe</tpe>
+  <tpe x="909" y="893" tpage="default_8.bz2">sprPriCircle_Nightmare_400303b8-23d5-4108-b5b4-63c715893834.tpe</tpe>
+  <tpe x="945" y="837" tpage="default_8.bz2">sprPlayerJump_Nightmare_f4b29d1c-6feb-43a6-ab6f-5862aa7caf5c.tpe</tpe>
+  <tpe x="1004" y="625" tpage="default_8.bz2">spr01Pulley_Nightmare_06e68040-5341-4f74-8cf5-8b5d6eaa98a4.tpe</tpe>
+  <tpe x="1005" y="498" tpage="default_8.bz2">sprPlayerBack_Nightmare_5f1b0033-5f3c-445a-b03c-7b347b6be5dd.tpe</tpe>
+  <tpe x="738" y="641" tpage="default_8.bz2">sprPlayerBack_Nightmare_65314ec9-4dd6-48f0-b76f-3a4316eb48a1.tpe</tpe>
+  <tpe x="634" y="858" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_217b47d4-01e3-4446-b511-d892e653e87c.tpe</tpe>
+  <tpe x="966" y="829" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_65aebd36-a866-4d55-83a5-cf8a3b7fc07a.tpe</tpe>
   <tpe x="377" y="1414" tpage="default_8.bz2">spr01PipePlantL_Nightmare_440830a0-e382-4ed9-92f1-262bc0a78f02.tpe</tpe>
   <tpe x="1011" y="2" tpage="default_8.bz2">spr01PipePlantL_Nightmare_ea0b7348-c207-4e9f-bbd2-d33761cb9cb2.tpe</tpe>
   <tpe x="749" y="455" tpage="default_8.bz2">sprTriggerButton_Nightmare_b1ef42dd-9563-4234-b429-cd192fe1770e.tpe</tpe>
   <tpe x="364" y="2029" tpage="default_8.bz2">spr01LavaBubble_Nightmare_2de2f1ca-0f37-4976-94ee-c34847bebdce.tpe</tpe>
-  <tpe x="934" y="801" tpage="default_8.bz2">spr01LavaBubble_Nightmare_6e2c9bae-4c62-4135-8b34-ec2a2030b9d6.tpe</tpe>
-  <tpe x="867" y="933" tpage="default_8.bz2">spr01LavaBubble_Nightmare_afaebc7b-0998-4b4d-99d8-2ec3e2073ec0.tpe</tpe>
+  <tpe x="867" y="961" tpage="default_8.bz2">spr01LavaBubble_Nightmare_6e2c9bae-4c62-4135-8b34-ec2a2030b9d6.tpe</tpe>
+  <tpe x="895" y="928" tpage="default_8.bz2">spr01LavaBubble_Nightmare_afaebc7b-0998-4b4d-99d8-2ec3e2073ec0.tpe</tpe>
   <tpe x="404" y="558" tpage="default_8.bz2">spr01Pipe_Nightmare_5fec015c-98ac-4932-bd25-6848154ab243.tpe</tpe>
-  <tpe x="858" y="968" tpage="default_8.bz2">spr01Pipe_Nightmare_c5434273-5f59-44c6-9057-abe91c5f296b.tpe</tpe>
-  <tpe x="831" y="992" tpage="default_8.bz2">spr01PipePlantL_Nightmare_7475c54c-d0ce-4a60-8199-88a880a2e00a.tpe</tpe>
+  <tpe x="827" y="997" tpage="default_8.bz2">spr01Pipe_Nightmare_c5434273-5f59-44c6-9057-abe91c5f296b.tpe</tpe>
+  <tpe x="734" y="737" tpage="default_8.bz2">spr01PipePlantL_Nightmare_7475c54c-d0ce-4a60-8199-88a880a2e00a.tpe</tpe>
   <tpe x="568" y="474" tpage="default_8.bz2">spr01PipePlantL_Nightmare_89862e3c-cc4a-4c51-868f-7cf70f3731cc.tpe</tpe>
   <tpe x="568" y="474" tpage="default_8.bz2">spr01PipePlantL_Nightmare_e89e1008-e2a0-44df-abc4-4e8b1b2782ea.tpe</tpe>
-  <tpe x="708" y="733" tpage="default_8.bz2">sprMiniBlockMask_Nightmare_38aad7d7-136d-43e7-937f-ded5ba41f57d.tpe</tpe>
-  <tpe x="634" y="810" tpage="default_8.bz2">sprMiniSpikeDown_Nightmare_539f599a-e836-40ed-a96b-f922697d90a2.tpe</tpe>
-  <tpe x="694" y="768" tpage="default_8.bz2">sprMiniSpikeLeft_Nightmare_489866f3-b4ab-4518-ba8d-e64d50255906.tpe</tpe>
-  <tpe x="1005" y="652" tpage="default_8.bz2">sprMiniSpikeRight_Nightmare_26a58870-e223-44a1-aa5a-c5552033a434.tpe</tpe>
-  <tpe x="1005" y="526" tpage="default_8.bz2">sprMiniSpikeUp_Nightmare_93e0bbd9-c4b0-406d-a736-859f45f719c2.tpe</tpe>
-  <tpe x="986" y="826" tpage="default_8.bz2">sprPlatform_Nightmare_a5c0e27d-3fde-4d6f-8da7-ecc4a180729e.tpe</tpe>
-  <tpe x="568" y="510" tpage="default_8.bz2">sprPlayerMask_Nightmare_d5bcacd1-4415-44e0-b95e-84096da3fdb6.tpe</tpe>
-  <tpe x="728" y="737" tpage="default_8.bz2">sprPlayerMaskFlip_Nightmare_3f75cf60-e798-40eb-8cb3-f3bcb89a3b21.tpe</tpe>
-  <tpe x="1007" y="182" tpage="default_8.bz2">spr01PipePlantL_Nightmare_92af0c68-8c02-4801-9788-e523457b369f.tpe</tpe>
-  <tpe x="973" y="854" tpage="default_8.bz2">spr01PipePlantL_Nightmare_cbcebb26-ce66-4af2-ab2a-3e384d464d8b.tpe</tpe>
+  <tpe x="1002" y="766" tpage="default_8.bz2">sprMiniBlockMask_Nightmare_38aad7d7-136d-43e7-937f-ded5ba41f57d.tpe</tpe>
+  <tpe x="690" y="810" tpage="default_8.bz2">sprMiniSpikeDown_Nightmare_539f599a-e836-40ed-a96b-f922697d90a2.tpe</tpe>
+  <tpe x="933" y="893" tpage="default_8.bz2">sprMiniSpikeLeft_Nightmare_489866f3-b4ab-4518-ba8d-e64d50255906.tpe</tpe>
+  <tpe x="1005" y="653" tpage="default_8.bz2">sprMiniSpikeRight_Nightmare_26a58870-e223-44a1-aa5a-c5552033a434.tpe</tpe>
+  <tpe x="1005" y="523" tpage="default_8.bz2">sprMiniSpikeUp_Nightmare_93e0bbd9-c4b0-406d-a736-859f45f719c2.tpe</tpe>
+  <tpe x="670" y="834" tpage="default_8.bz2">sprPlatform_Nightmare_a5c0e27d-3fde-4d6f-8da7-ecc4a180729e.tpe</tpe>
+  <tpe x="863" y="981" tpage="default_8.bz2">sprPlayerMaskFlip_Nightmare_3f75cf60-e798-40eb-8cb3-f3bcb89a3b21.tpe</tpe>
+  <tpe x="746" y="737" tpage="default_8.bz2">spr01PipePlantL_Nightmare_92af0c68-8c02-4801-9788-e523457b369f.tpe</tpe>
+  <tpe x="726" y="773" tpage="default_8.bz2">spr01PipePlantL_Nightmare_cbcebb26-ce66-4af2-ab2a-3e384d464d8b.tpe</tpe>
+  <tpe x="1007" y="182" tpage="default_8.bz2">sprPlayerMask_Nightmare_d5bcacd1-4415-44e0-b95e-84096da3fdb6.tpe</tpe>
   <tpe x="328" y="1575" tpage="default_8.bz2">spr01Pipe_Nightmare_b9c11a8f-349c-4cb6-9054-3ccc3c7fd221.tpe</tpe>
-  <tpe x="377" y="1450" tpage="default_8.bz2">spr01PipePlantL_Nightmare_41903111-96fe-4270-928c-cc75398bca61.tpe</tpe>
-  <tpe x="1011" y="38" tpage="default_8.bz2">spr01PipePlantL_Nightmare_44c221a7-3103-4bfb-b6a2-b85f112401c6.tpe</tpe>
-  <tpe x="1008" y="730" tpage="default_8.bz2">sprJumpRefresher_Nightmare_1b9b8c66-2143-4044-a70e-a96fe7e9285e.tpe</tpe>
-  <tpe x="390" y="1250" tpage="default_8.bz2">spr01PipePlantL_Nightmare_c5ac48c4-eeb3-47c3-8a99-8e1126b391ad.tpe</tpe>
-  <tpe x="399" y="1042" tpage="default_8.bz2">spr01MelonGameLineH_Nightmare_0fc2619e-d66c-4add-97a8-54b95399dd8b.tpe</tpe>
-  <tpe x="392" y="1050" tpage="default_8.bz2">spr01MelonGameLineV_Nightmare_0fc2619e-d66c-4add-97a8-54b95399dd8b.tpe</tpe>
-  <tpe x="392" y="1086" tpage="default_8.bz2">spr01PipePlantL_Nightmare_0ba67c0a-95b2-42b0-a858-295b9fbcd06a.tpe</tpe>
-  <tpe x="392" y="1086" tpage="default_8.bz2">spr01PipePlantL_Nightmare_7001b16a-29ff-43cc-9389-71da18cb1829.tpe</tpe>
-  <tpe x="392" y="1122" tpage="default_8.bz2">spr01PipePlantL_Nightmare_c1ca18d1-50a4-4b34-b9f3-0205f5c34be9.tpe</tpe>
-  <tpe x="392" y="1158" tpage="default_8.bz2">spr01Pulley_Nightmare_a0572c65-e4bf-4ac0-8572-5cbbef58aad2.tpe</tpe>
-  <tpe x="400" y="1050" tpage="default_8.bz2">spr01Handle_Nightmare_56028925-77db-4229-a278-75db8201bdbb.tpe</tpe>
-  <tpe x="400" y="1050" tpage="default_8.bz2">spr01Pulley_Nightmare_56028925-77db-4229-a278-75db8201bdbb.tpe</tpe>
-  <tpe x="400" y="1062" tpage="default_8.bz2">sprBow_Nightmare_06504e04-da1e-4361-b380-df26ed43b0fa.tpe</tpe>
-  <tpe x="400" y="1076" tpage="default_8.bz2">spr01PipePlantL_Nightmare_1b7634a0-c565-42eb-941f-cea4019a582c.tpe</tpe>
-  <tpe x="419" y="1050" tpage="default_8.bz2">spr01MelonGameLineH_Nightmare_6afd0ada-3cbe-405e-b7b2-4e52f3598376.tpe</tpe>
-  <tpe x="407" y="1076" tpage="default_8.bz2">spr01MelonGameLineV_Nightmare_6afd0ada-3cbe-405e-b7b2-4e52f3598376.tpe</tpe>
-  <tpe x="444" y="1042" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_c558da9a-d9da-4a2a-a84f-2eac113e1b2b.tpe</tpe>
-  <tpe x="400" y="1112" tpage="default_8.bz2">spr01PlayerMaskOnPipe_Nightmare_d5bcacd1-4415-44e0-b95e-84096da3fdb6.tpe</tpe>
-  <tpe x="480" y="1042" tpage="default_8.bz2">sprBullet_Nightmare_1004f05a-81bf-4c85-b722-9502af3f9368.tpe</tpe>
-  <tpe x="435" y="1042" tpage="default_8.bz2">sprBullet_Nightmare_df7175cb-6a61-4af4-95f1-302da5c6738c.tpe</tpe>
-  <tpe x="400" y="1122" tpage="default_8.bz2">sprBlood_Nightmare_1271cc71-6223-4ff8-a8fa-accf71df5ef6.tpe</tpe>
-  <tpe x="408" y="1101" tpage="default_8.bz2">sprBlood_Nightmare_72129233-4345-489f-9f6b-7a58d6711c0f.tpe</tpe>
-  <tpe x="490" y="1044" tpage="default_8.bz2">res_pt_shape_pixel.tpe</tpe>
-  <tpe x="444" y="1048" tpage="default_8.bz2">sprBlood_Nightmare_21761398-b429-4327-9547-1e5fe5a3c110.tpe</tpe>
+  <tpe x="934" y="837" tpage="default_8.bz2">spr01PipePlantL_Nightmare_41903111-96fe-4270-928c-cc75398bca61.tpe</tpe>
+  <tpe x="966" y="842" tpage="default_8.bz2">spr01PipePlantL_Nightmare_44c221a7-3103-4bfb-b6a2-b85f112401c6.tpe</tpe>
+  <tpe x="994" y="801" tpage="default_8.bz2">sprJumpRefresher_Nightmare_1b9b8c66-2143-4044-a70e-a96fe7e9285e.tpe</tpe>
+  <tpe x="392" y="1922" tpage="default_8.bz2">spr01PipePlantL_Nightmare_c5ac48c4-eeb3-47c3-8a99-8e1126b391ad.tpe</tpe>
+  <tpe x="401" y="1042" tpage="default_8.bz2">spr01MelonGameLineH_Nightmare_0fc2619e-d66c-4add-97a8-54b95399dd8b.tpe</tpe>
+  <tpe x="394" y="1050" tpage="default_8.bz2">spr01MelonGameLineV_Nightmare_0fc2619e-d66c-4add-97a8-54b95399dd8b.tpe</tpe>
+  <tpe x="394" y="1086" tpage="default_8.bz2">spr01PipePlantL_Nightmare_0ba67c0a-95b2-42b0-a858-295b9fbcd06a.tpe</tpe>
+  <tpe x="394" y="1086" tpage="default_8.bz2">spr01PipePlantL_Nightmare_7001b16a-29ff-43cc-9389-71da18cb1829.tpe</tpe>
+  <tpe x="393" y="1122" tpage="default_8.bz2">spr01PipePlantL_Nightmare_c1ca18d1-50a4-4b34-b9f3-0205f5c34be9.tpe</tpe>
+  <tpe x="393" y="1158" tpage="default_8.bz2">spr01Pulley_Nightmare_a0572c65-e4bf-4ac0-8572-5cbbef58aad2.tpe</tpe>
+  <tpe x="402" y="1050" tpage="default_8.bz2">spr01Handle_Nightmare_56028925-77db-4229-a278-75db8201bdbb.tpe</tpe>
+  <tpe x="402" y="1050" tpage="default_8.bz2">spr01Pulley_Nightmare_56028925-77db-4229-a278-75db8201bdbb.tpe</tpe>
+  <tpe x="402" y="1062" tpage="default_8.bz2">sprBow_Nightmare_06504e04-da1e-4361-b380-df26ed43b0fa.tpe</tpe>
+  <tpe x="402" y="1076" tpage="default_8.bz2">spr01PipePlantL_Nightmare_1b7634a0-c565-42eb-941f-cea4019a582c.tpe</tpe>
+  <tpe x="421" y="1050" tpage="default_8.bz2">spr01MelonGameLineH_Nightmare_6afd0ada-3cbe-405e-b7b2-4e52f3598376.tpe</tpe>
+  <tpe x="409" y="1076" tpage="default_8.bz2">spr01MelonGameLineV_Nightmare_6afd0ada-3cbe-405e-b7b2-4e52f3598376.tpe</tpe>
+  <tpe x="446" y="1042" tpage="default_8.bz2">spr01MelonGameBarrior_Nightmare_c558da9a-d9da-4a2a-a84f-2eac113e1b2b.tpe</tpe>
+  <tpe x="402" y="1112" tpage="default_8.bz2">spr01PlayerMaskOnPipe_Nightmare_d5bcacd1-4415-44e0-b95e-84096da3fdb6.tpe</tpe>
+  <tpe x="482" y="1042" tpage="default_8.bz2">sprBullet_Nightmare_1004f05a-81bf-4c85-b722-9502af3f9368.tpe</tpe>
+  <tpe x="437" y="1042" tpage="default_8.bz2">sprBullet_Nightmare_df7175cb-6a61-4af4-95f1-302da5c6738c.tpe</tpe>
+  <tpe x="410" y="1101" tpage="default_8.bz2">sprBlood_Nightmare_1271cc71-6223-4ff8-a8fa-accf71df5ef6.tpe</tpe>
+  <tpe x="490" y="1042" tpage="default_8.bz2">sprBlood_Nightmare_72129233-4345-489f-9f6b-7a58d6711c0f.tpe</tpe>
+  <tpe x="448" y="1050" tpage="default_8.bz2">res_pt_shape_pixel.tpe</tpe>
+  <tpe x="410" y="1107" tpage="default_8.bz2">sprBlood_Nightmare_21761398-b429-4327-9547-1e5fe5a3c110.tpe</tpe>
 </TextureGroup>

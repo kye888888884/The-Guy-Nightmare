@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Stage01",
-    "path":"folders/Objects/Stage01.yy",
+    "path":"folders/Objects/Themes/Stage01.yy",
   },
   "parentObjectId":null,
   "persistent":false,

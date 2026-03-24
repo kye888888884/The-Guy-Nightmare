@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Golf",
-    "path":"folders/Sprites/Stage01/Golf.yy",
+    "path":"folders/Sprites/Themes/Stage01/Golf.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,1 @@
+global.restarted = false // Set restarted to false at the beginning of the game

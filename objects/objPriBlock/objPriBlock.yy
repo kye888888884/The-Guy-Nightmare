@@ -37,5 +37,5 @@
     "path":"sprites/sprBlockMask/sprBlockMask.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

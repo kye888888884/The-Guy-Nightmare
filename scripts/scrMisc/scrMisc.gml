@@ -12,6 +12,15 @@
 #macro EF_RING sprEffectRing
 #macro EF_TRINKLE sprEffectTrinkle
 
+#macro CTRL keyboard_check(vk_control)
+#macro ALT keyboard_check(vk_alt)
+#macro SHIFT keyboard_check(vk_shift)
+#macro WHEEL_UP mouse_wheel_up()
+#macro WHEEL_DOWN mouse_wheel_down()
+
+#macro PRI_FRONT_COLOR make_color_hsv(0, 0, 0)
+#macro PRI_BACK_COLOR make_color_hsv(50, 100, 255)
+
 function get_time() {
     return current_time / 1000
 }
@@ -53,6 +62,10 @@ function particle_delete(_p) {
     part_emitter_destroy(_p.s, _p.e)
     part_type_destroy(_p.t)
     part_system_destroy(_p.s)
+}
+
+function is_restarted() {
+    return global.restarted
 }
 
 function shader_set_uniform(_shader, _name, _value) {
@@ -197,6 +210,13 @@ function cam() {
     return _id
 }
 
-function vec2(_x, _y) {
-    return instance_create(_vec2, _x, _y)
+function draw_text_outline(_text, _x, _y, _color = c_white, _outline_color = c_black) {
+    draw_set_color(_outline_color)
+    for (var _h = -1; _h <= 1; _h++) {
+        for (var _v = -1; _v <= 1; _v++) {
+            draw_text(_x + _h, _y + _v, _text)
+        }
+    }
+    draw_set_color(_color)
+    draw_text(_x, _y, _text)
 }

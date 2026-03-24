@@ -29,7 +29,7 @@
   "origin":1,
   "parent":{
     "name":"Stage01",
-    "path":"folders/Sprites/Stage01.yy",
+    "path":"folders/Sprites/Themes/Stage01.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

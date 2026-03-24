@@ -11,10 +11,10 @@ function scrInitEngineOptions() {
 	global.debugInfJump = false; // Enables debug infinite jump (toggle with End key)
 	global.debugShowHitbox = false; // Enables showing the player's hitbox (toggle with Del key)
 
-	global.windowCaptionDef = "Mystery House"; // Sets the default window caption
+	global.windowCaptionDef = "The Guy: Nightmare"; // Sets the default window caption
 	window_set_caption(global.windowCaptionDef);
 
-	global.startRoom = rTemplate; // Sets which room for the game to begin with
+	global.startRoom = rHome; // Sets which room for the game to begin with
 
 	global.deathMusicMode = 0; // Sets whether or not to play death music when the player dies (0 = no death music, 1 = death music and instantly pause current music, 2 = death music and fade out current music)
 	global.adAlign = false; // Sets whether or not to enable A/D align
@@ -22,7 +22,7 @@ function scrInitEngineOptions() {
 
 	// Set global engine options that stay constant
 
-	#macro MD5_STR_ADD "Put something here!" // Sets what to add to the end of md5 input string to make saves harder to hack, should be set to something unique and hard to predict (similar to setting a password)
+	#macro MD5_STR_ADD "126dgte78e2" // Sets what to add to the end of md5 input string to make saves harder to hack, should be set to something unique and hard to predict (similar to setting a password)
 
 	#macro DIFFICULTY_MENU_MODE 1 // Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
 	#macro MENU_SOUND sndJump // Sets what sound to use for navigating the main menu
@@ -52,27 +52,39 @@ function scrInitGlobals() {
 
 	// Initialize basic game variables
 
+	global.dataManager = new DataManager() // Create a global DataManager instance for handling save data
+	var _dm = global.dataManager
+
 	global.saveNum = 1;
 	global.difficulty = 0; // 0 = medium, 1 = hard, 2 = very hard, 3 = impossible
 	global.deaths = 0;
 	global.time = 0;
 	global.timeMicro = 0;
-	global.saveRoom = "";
-	global.savePlayerX = 0;
-	global.savePlayerY = 0;
+	_dm.set("difficulty", global.difficulty)
+	_dm.set("deaths", global.deaths)
+	_dm.set("time", global.time)
+	_dm.set("time_micro", global.timeMicro)
+	_dm.set("room", "")
+	_dm.set("player_x", 0)
+	_dm.set("player_y", 0)
 	global.grav = 1;
-	global.saveGrav = 1;
+	_dm.set("grav", global.grav)
 
-	global.secretItem = array_create(SECRET_ITEM_TOTAL,false);
-	global.saveSecretItem = array_create(SECRET_ITEM_TOTAL,false);
+	global.secretItem = new List().fill(SECRET_ITEM_TOTAL, false) // Keeps track of which secret items the player has gotten
+	_dm.set("secret_item", global.secretItem.to_array())
+	global.bossItem = new List().fill(BOSS_ITEM_TOTAL, false) // Keeps track of which boss items the player has gotten
+	_dm.set("boss_item", global.bossItem.to_array())
 
-	global.bossItem = array_create(BOSS_ITEM_TOTAL,false);
-	global.saveBossItem = array_create(BOSS_ITEM_TOTAL,false);
+	global.gameClear = false
+	_dm.set("game_clear", global.gameClear)
 
-	global.gameClear = false;
-	global.saveGameClear = false;
+	global.trigger = new List().fill(50, false) // A list of 50 triggers that can be used for anything (i.e. save points, cutscene triggers, etc.)
+	_dm.set("trigger", global.trigger.to_array())
 
-	global.trigger = array_create(50,false);
+	_dm.set("pri_moon_mat", undefined)
+	_dm.set("pri_cam_pos", undefined)
+
+	global.player_pos = new Vec2(0, 0) // Keeps track of the player's position for use in rooms where the player can move between them (i.e. the hub room)
 
 	global.gameStarted = false; // Determines whether the game is currently in progress (enables saving, restarting, etc.)
 	global.noPause = false; // Sets whether or not to allow pausing (useful for bosses to prevent desync)
@@ -98,6 +110,9 @@ function scrInitGlobals() {
 
 	global.controllerMode = false; // Keeps track of whether to use keyboard or controller for inputs
 	global.controllerDelay = -1; // Handles delay for switching between keyboard/controller so that the player can't use both at the same time
+
+	global.softRestart = false; // Keeps track of whether to do a soft reset (restart the game without going back to the main menu)
+	global.restarted = false; // Keeps track of whether the game has been restarted to prevent restarting multiple times in a row
 
 	global.cam_x = 0;
 	global.cam_y = 0;

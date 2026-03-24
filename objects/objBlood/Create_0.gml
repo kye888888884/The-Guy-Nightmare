@@ -7,3 +7,7 @@ speed = random(6);
 gravity = (0.1+random(0.2)) * global.grav;
 
 depth -= 100
+
+disappear = false
+
+alarm[0] = irandom_range(50, 100)

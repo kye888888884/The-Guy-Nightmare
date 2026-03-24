@@ -75,7 +75,12 @@ if (global.gameStarted) {
         // Check for restart button
 		if (scrButtonCheckPressed(global.restartButton)) {
             // Stop death sound/music
-            audio_stop_sound(global.deathSound);
+            if (!global.softRestart)
+                audio_stop_sound(global.deathSound);
+            else {
+                global.restarted = true
+                alarm[1] = 2
+            }
             audio_stop_sound(global.gameOverMusic);
             
             // Resume room music
@@ -122,8 +127,8 @@ if (global.debugMode && global.gameStarted && !global.gamePaused) {
     // Drag player with mouse
 	if (keyboard_check(vk_tab)) {
         with (objPlayer) {
-            x = mouse_x;
-            y = mouse_y;
+            phy_position_x = mouse_x;
+            phy_position_y = mouse_y;
         }
     }
 	
@@ -204,11 +209,13 @@ if (keyboard_check_pressed(vk_f2)) {
 }
 
 // Toggle fullscreen mode
-if (keyboard_check_pressed(vk_f4) && !global.gamePaused) {
-    global.fullscreenMode = !global.fullscreenMode;
-    window_set_fullscreen(global.fullscreenMode);
-    
-    scrSaveConfig(); // Save fullscreen setting
+if (keyboard_check_pressed(vk_f11) or (ALT and keyboard_check_pressed(vk_enter))) {
+    if (!global.gamePaused) {
+        global.fullscreenMode = !global.fullscreenMode;
+        window_set_fullscreen(global.fullscreenMode);
+        
+        scrSaveConfig(); // Save fullscreen setting
+    }
 }
 
 // Toggle music
@@ -216,4 +223,9 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("M")) && !global.ga
     scrToggleMusic();
     
     scrSaveConfig(); // Save mute setting
+}
+
+if (instance_exists(objPlayer)) {
+    global.player_pos.x = objPlayer.x
+    global.player_pos.y = objPlayer.y
 }

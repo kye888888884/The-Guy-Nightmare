@@ -34,44 +34,6 @@ function pos_on_matrix(_mat, _x, _y, _z) {
     return {x: _pos[0], y: _pos[1], z: _pos[2]}
 }
 
-function shading_option() {
-    return instance_create(_shading_option, 0, 0)
-}
-
-function shader_set_3d_model(_obj_shading_option) {
-    var _shd = shd3DModel
-    var _so = _obj_shading_option.get_option()
-
-    shader_set(_shd)
-    shader_set_uniform(_shd, "u_light_dir", _so.light_dir)
-    shader_set_uniform(_shd, "u_light_col", _so.light_col)
-    shader_set_uniform(_shd, "u_ambient", _so.ambient)
-
-    shader_set_uniform(_shd, "u_normal", _so.normal)
-    if (_so.normal > 0.0) {
-        var _u_normal = shader_get_sampler_index(_shd, "u_sample_normal")
-        texture_set_stage(_u_normal, _so.sample_normal)
-    }
-
-    shader_set_uniform(_shd, "u_roughness", _so.roughness)
-    if (_so.roughness > 0.0) {
-        var _u_roughness = shader_get_sampler_index(_shd, "u_sample_roughness")
-        texture_set_stage(_u_roughness, _so.sample_roughness)
-    }
-
-    shader_set_uniform(_shd, "u_ao", _so.ao)
-    if (_so.ao > 0.0) {
-        var _u_ao = shader_get_sampler_index(_shd, "u_sample_ao")
-        texture_set_stage(_u_ao, _so.sample_ao)
-    }
-
-    shader_set_uniform(_shd, "u_specular", _so.specular)
-    if (_so.specular > 0.0) {
-        var _u_specular = shader_get_sampler_index(_shd, "u_sample_specular")
-        texture_set_stage(_u_specular, _so.sample_specular)
-    }
-}
-
 function v_add(_vb, _x, _y, _z, _nx, _ny, _nz, _u, _v) {
     vertex_position_3d(_vb, _x, _y, _z);
     vertex_normal(_vb, _nx, _ny, _nz);

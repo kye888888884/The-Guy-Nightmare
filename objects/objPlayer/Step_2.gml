@@ -10,26 +10,6 @@ if (position_meeting(x, y, objBlock)) {
 	// scrKillPlayer();
 }
 
-// Check water collision
-with (objWaterParent) {
-	event_user(0);
-}
-
-// Check save collision
-with (objSave) {
-	event_user(1);
-}
-
-// Check room changer collision
-with (objRoomChanger) {
-	event_user(0);
-}
-
-// Check warp next collision
-with (objWarpNext) {
-	event_user(0);
-}
-
 // Check if player left the room and update player sprite (if set to)
 if ((x < 0 || x > room_width || y < 0 || y > room_height) && global.edgeDeath) {
     scrKillPlayer();

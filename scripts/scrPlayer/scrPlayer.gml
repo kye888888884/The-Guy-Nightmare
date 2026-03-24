@@ -5,14 +5,14 @@ function scrPlayerJump() {
 		rest_jump = max(1, rest_jump)
 	}
 	if (rest_jump > 0) {
-		if (can_first_jump) {
+		if (on_floor) {
 			// Single jump
-			vspeed = -jump
+			phy_speed_y = -jump
 			audio_play_sound(sndJump,0,false)
 		}
 		else {
 			// Double jump
-			vspeed = -jump2
+			phy_speed_y = -jump2
 			sprite_index = sprPlayerJump
 			audio_play_sound(sndDJump,0,false)
 		}
@@ -24,8 +24,8 @@ function scrPlayerJump() {
 /// @description Makes the player lose upward vertical momentum
 function scrPlayerVJump() {
 
-	if (vspeed * global.grav < 0) {
-	    vspeed *= 0.45;
+	if (phy_speed_y * global.grav < 0) {
+	    phy_speed_y *= 0.45;
 	}
 }
 
@@ -54,12 +54,6 @@ function scrFlipGrav() {
 		jump = abs(jump) * global.grav;
 		jump2 = abs(jump2) * global.grav;
 		gravity = abs(gravity) * global.grav;
-	
-		if (global.grav == 1) {
-			mask_index = sprPlayerMask;
-		} else {
-			mask_index = sprPlayerMaskFlip;
-		}
 	
 		y += 4 * global.grav;
 	}

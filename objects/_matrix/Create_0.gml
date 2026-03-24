@@ -32,7 +32,7 @@ function update() {
     return id
 }
 
-function set_pos(_x, _y, _z) {
+function set_pos(_x, _y, _z = 0) {
     x = _x
     y = _y
     z = _z
@@ -94,6 +94,14 @@ function rotate(_drx, _dry, _drz) {
 
 function matrix() {
     return mat
+}
+
+function set() {
+    matrix_set(matrix_world, mat)
+}
+
+function reset() {
+    matrix_set(matrix_world, matrix_build_identity())
 }
 
 function free() {

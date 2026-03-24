@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Melon",
-    "path":"folders/Sprites/Stage01/Melon.yy",
+    "path":"folders/Sprites/Themes/Stage01/Melon.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

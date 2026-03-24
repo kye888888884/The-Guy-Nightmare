@@ -1,3 +1,4 @@
 /// @description Destroy self
 
-instance_destroy();
+if (global.edgeDeath)
+	instance_destroy();

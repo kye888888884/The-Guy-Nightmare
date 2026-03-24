@@ -1,2 +1,6 @@
 end_3d()
 delete_surface()
+bloom_shader.free()
+so_fg_front.free()
+so_fg_back.free()
+list_static_objects.free()

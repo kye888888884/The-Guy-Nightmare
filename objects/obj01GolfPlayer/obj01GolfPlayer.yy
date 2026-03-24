@@ -16,7 +16,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Golf",
-    "path":"folders/Objects/Stage01/Golf.yy",
+    "path":"folders/Objects/Themes/Stage01/Golf.yy",
   },
   "parentObjectId":null,
   "persistent":false,
