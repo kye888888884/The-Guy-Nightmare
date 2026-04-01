@@ -23,8 +23,8 @@ function init(_path, _angle_offset = 0, _dist_offset = 0) {
     show = 1
     prev_pos = path.get_pos_dist(0)
     next_pos = path.get_pos_dist(32)
-    prev_dir = path.get_dir_dist(0).dir() + angle_offset
-    next_dir = path.get_dir_dist(32).dir() + angle_offset
+    prev_dir = path.get_dir_dist(0) + angle_offset
+    next_dir = path.get_dir_dist(32) + angle_offset
 }
 
 function step() {
@@ -32,19 +32,19 @@ function step() {
     if (dist > 32) {
         dist_offset += 32
         dist -= 32
-        if (active) {
+        if (true) {
             var _next_dist = clamp(dist_offset + 32, 0, max_dist - 16)
             prev_pos = next_pos
             next_pos = path.get_pos_dist(_next_dist)
             prev_dir = next_dir
-            next_dir = path.get_dir_dist(_next_dist).dir() + angle_offset
+            next_dir = path.get_dir_dist(_next_dist) + angle_offset
             if (abs(next_dir - prev_dir) > 180) {
                 if (next_dir > prev_dir) next_dir -= 360
                 else next_dir += 360
             }
         }
     }
-    if (active) {
+    if (true) {
         var _pos = prev_pos.lerp(next_pos, dist / 32)
         x = xstart + _pos.x
         y = ystart + _pos.y
@@ -102,11 +102,10 @@ function draw_back() {
 }
 
 function update() {
-    var _chunk = global.current_chunk
-    var _left = (_chunk.x - 1) * global.chunk_size
-    var _top = (_chunk.y - 1) * global.chunk_size
-    var _w = global.chunk_size * 4
-    var _h = global.chunk_size * 4
+    var _left = global.cam_x - SCREEN_WIDTH * 2
+    var _top = global.cam_y - SCREEN_WIDTH * 2
+    var _w = SCREEN_WIDTH * 4
+    var _h = SCREEN_WIDTH * 4
     var _in_box = point_in_rectangle(x, y, _left, _top, _left + _w, _top + _h)
     if (!_in_box) {
         active = false

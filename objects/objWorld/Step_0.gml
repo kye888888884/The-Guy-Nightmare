@@ -84,7 +84,9 @@ if (global.gameStarted) {
             audio_stop_sound(global.gameOverMusic);
             
             // Resume room music
-            audio_resume_sound(global.currentMusic);
+            if (global.currentMusic != -1) {
+                audio_resume_sound(global.currentMusic);
+            }
             
             // Return to old gain if music is being faded out
             if (global.musicFading) {
@@ -223,9 +225,4 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("M")) && !global.ga
     scrToggleMusic();
     
     scrSaveConfig(); // Save mute setting
-}
-
-if (instance_exists(objPlayer)) {
-    global.player_pos.x = objPlayer.x
-    global.player_pos.y = objPlayer.y
 }

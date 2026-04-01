@@ -25,12 +25,10 @@ else {
 var h = current_move
 
 if (h != 0) { // Player is moving
-    xScale = h // Set the direction the player is facing
+    image_xscale = h // Set the direction the player is facing
     sprite_index = sprPlayerRun
-	image_speed = 0.5
 } else { // Player is not moving
     sprite_index = sprPlayerIdle
-	image_speed = 0.2
 }
 
 // physics_apply_force(0, 0, 0, -phy_mass * 40) // ignore world gravity
@@ -41,9 +39,8 @@ if (phy_speed_y > maxVSpeed) {
 	phy_speed_y = maxVSpeed
 }
 
+physics_apply_force(0, 0, 0, -phy_mass * 30)
 if (on_floor) {
-    if (phy_speed_y >= 0)
-        physics_apply_force(0, 0, 0, -phy_mass * 30.9) // ignore world gravity
     if (L_pressed or R_pressed) {
         if (h == -sign(col_normal.x)) { // downhill
             if (phy_speed_y > -jump2) {
@@ -57,6 +54,9 @@ if (on_floor) {
             phy_speed_y = 0
     }
 }
+else {
+    physics_apply_force(0, 0, 0, phy_mass * 30)
+}
 
 if (on_sliding) {
     if (h == sign(col_normal.x))
@@ -66,7 +66,11 @@ if (on_sliding) {
     physics_apply_force(0, 0, 0, phy_mass * 30.9)
 }
 
-phy_speed_x = move_hspeed;
+phy_speed_x = move_hspeed
+var _h = move_hspeed == 0 ? image_xscale : move_hspeed
+with (objCape) {
+    set_wind(_h, other.phy_speed_y)
+}
 
 if (!on_floor) {
     if ((phy_speed_y * global.grav) < -0.5) {
@@ -85,16 +89,16 @@ else {
 if (!frozen) { // Check if frozen before doing anything
     if (scrButtonCheckPressed(global.jumpButton)) {
         scrPlayerJump()
-	}
+    }
     if (scrButtonCheckReleased(global.jumpButton)) {
         scrPlayerVJump()
-	}
+    }
     if (scrButtonCheckPressed(global.shootButton)) {
         scrPlayerShoot()
-	}
+    }
     if (scrButtonCheckPressed(global.suicideButton)) {
         scrKillPlayer()
-	}
+    }
 }
 
 // show_debug_message("On floor: " + string(on_floor) + " | On wall: " + string(on_wall) + " | On sliding: " + string(on_sliding))

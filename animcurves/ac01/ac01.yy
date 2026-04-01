@@ -38,8 +38,8 @@
   "function":2,
   "name":"ac01",
   "parent":{
-    "name":"Paths",
-    "path":"folders/Paths.yy",
+    "name":"Animation Curves",
+    "path":"folders/Animation Curves.yy",
   },
   "resourceType":"GMAnimCurve",
   "resourceVersion":"2.0",

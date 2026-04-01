@@ -1,6 +1,7 @@
 /// @description Initialize variables
 
 image_index = irandom(image_number-1);
+image_blend = c_red;
 
 direction = irandom(35) * 10;
 speed = random(6);

@@ -1,12 +1,12 @@
 fix = fixture_bind(
     fixture_create_polygon(
         [
-            new Vec2(-4.5, -9), 
-            new Vec2(-4, -10), 
-            new Vec2(4, -10), 
-            new Vec2(4.5, -9), 
-            new Vec2(4.5, 10), 
-            new Vec2(-4.5, 10)
+            new Vec2(-8.1, -14), 
+            new Vec2(-7.5, -15), 
+            new Vec2(7.5, -15), 
+            new Vec2(8.1, -14), 
+            new Vec2(8.1, 15), 
+            new Vec2(-8.1, 15)
         ],
         5, 0, 0, 0, 0
     ), id

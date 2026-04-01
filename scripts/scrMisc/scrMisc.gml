@@ -18,9 +18,6 @@
 #macro WHEEL_UP mouse_wheel_up()
 #macro WHEEL_DOWN mouse_wheel_down()
 
-#macro PRI_FRONT_COLOR make_color_hsv(0, 0, 0)
-#macro PRI_BACK_COLOR make_color_hsv(50, 100, 255)
-
 function get_time() {
     return current_time / 1000
 }

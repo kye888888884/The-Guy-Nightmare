@@ -1,8 +1,3 @@
-if (is_restarted()) {
-    load()
-    with (objPriCircle) { restart() }
-}
-
 #region move camera
 {
     var _px = global.player_pos.x
@@ -42,6 +37,9 @@ if (is_restarted()) {
         var _dy = cam_y - _prev_cam_y
         moon_mat.rotate(_dy * f_rot, 0, 0)
     }
+
+    global.cam_x = cam_x + SCREEN_WIDTH / 2
+    global.cam_y = cam_y + SCREEN_HEIGHT / 2
 
     cam_trans_mat.set_pos(-cam_x, -cam_y - cam_pos_offset_y)
 }

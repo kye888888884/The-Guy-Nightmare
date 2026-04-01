@@ -63,6 +63,52 @@ function BloomShader(_downsampling = 2) constructor {
 	}
 }
 
+function DistortCircularShader() constructor {
+	shd = shdDistortCircular
+	so = new ShaderOption(shd)
+		.set_smooth(false)
+		.set_uniform("u_frequency", 5.0)
+		.set_uniform("u_strength", 5.0)
+
+	static set_resolution = function(_width, _height) {
+		so.set_uniform("u_resolution", [_width, _height])
+		return self
+	}
+
+	static set_center = function(_center = new Vec2(0, 0)) {
+		so.set_uniform("u_center", _center.to_array())
+		return self
+	}
+
+	static set_intensity = function(_intensity) {
+		so.set_uniform("u_intensity", _intensity)
+		return self
+	}
+
+	static set_frequency = function(_frequency) {
+		so.set_uniform("u_frequency", _frequency)
+		return self
+	}
+
+	static set_strength = function(_strength) {
+		so.set_uniform("u_strength", _strength)
+		return self
+	}
+	
+	static set = function() {
+		so.set_uniform("u_time", get_time())
+		so.set()
+	}
+
+	static reset = function() {
+		so.reset()
+	}
+
+	static free = function() {
+		so.free()
+	}
+}
+
 function DrawOption() constructor {
 	self_id = self
 	col = noone

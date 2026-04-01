@@ -5,7 +5,7 @@ function create_map(_p) {
     for (var _dist = 0; _dist < _p.len();) {
         var _pos = _p.get_pos_dist(_dist)
         var _ins = instance_create(objPriBlock, x + _pos.x, y + _pos.y, 1.05, 0.5)
-        _ins.image_angle = _p.get_dir_dist(_dist, 16).dir()
+        _ins.image_angle = _p.get_dir_dist(_dist, 16)
         _dist += 32
     }
 }
@@ -35,11 +35,12 @@ function draw() {
     // draw_circle_color(x + path2.get_pos_dist(dist2).x, y + path2.get_pos_dist(dist2).y, 4, c_blue, c_blue, false)
 }
 
-function debug() {
-    draw_text_outline("Dist: " + string(dist), 10, 90)
-}
-
 path1 = new Path(pathPriCurve1)
 path2 = new Path(pathPriCurve1_2)
 create_map(path1)
 create_map(path2)
+
+function debug() {
+    // draw_text_outline("Dist: " + string(dist), 10, 90)
+    draw_text_outline("Poses: " + string(path1.poses.len()), 10, 170)
+}

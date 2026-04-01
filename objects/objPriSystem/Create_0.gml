@@ -1,3 +1,8 @@
+// room_goto_live(rPri_01)
+
+#macro PRI_FRONT_COLOR make_color_hsv(0, 0, 0)
+#macro PRI_BACK_COLOR make_color_hsv(50, 100, 255)
+
 global.edgeDeath = false
 global.softRestart = true
 
@@ -58,9 +63,18 @@ so_fg_back = so_fg_front.copy().set_uniform("u_alpha", 1)
 
 bloom_shader = new BloomShader(4)
 
-global.chunk_size = SCREEN_WIDTH
+global.chunk_size = SCREEN_WIDTH / 2
 global.current_chunk = new Vec2(0, 0)
 list_static_objects = new List([objPriBlock, objPriSpike])
+list_draw_objects = new List([
+    objPriSpike, 
+    objPriSpikeFollowCurve, 
+    objPriSlopeDigLeft, 
+    objPriSlopeDigRight, 
+    objPriBlock, 
+    objPriCircle, 
+    objPriBicycle
+])
 
 draw_option = new DrawOption()
     .set_font(fDefault18)
@@ -87,7 +101,7 @@ function draw_player(_blend) {
     surface_set_target(surf_player)
     draw_clear_alpha(c_white, 0)
     with (objPlayer) {
-        draw_sprite_ext(sprite_index, image_index, 16, 16, xScale, image_yscale, 0, c_white, 1)
+        draw_sprite_ext(sprite_index, image_index, 16, 16, image_xscale, image_yscale, 0, c_white, 1)
     }
     surface_reset_target()
 
@@ -147,8 +161,10 @@ function update_surface() {
     with (objPriBlock) draw_front()
     with (objPriSlopeDigLeft) draw_front()
     with (objPriSlopeDigRight) draw_front()
+    with (objPriArea) draw_front()
     with (objPriCircle) draw_front()
     draw_player(c_white)
+    with (objPriBicycle) draw_front()
     cam_trans_mat.reset()
     surface_reset_target()
 
@@ -159,12 +175,14 @@ function update_surface() {
     draw_objects()
     with (objPriSpike) draw_back()
     with (objPriSpikeFollowCurve) draw_back()
+    with (objPriBlock) draw_back()
     with (objPriSlopeDigRight) draw_back()
     with (objPriSlopeDigLeft) draw_back()
-    with (objPriBlock) draw_back()
+    with (objPriArea) draw_back()
     with (objPriCircle) draw_back()
     with (objPriCurveMap) draw()
     draw_player(PRI_BACK_COLOR)
+    with (objPriBicycle) draw_back()
     cam_trans_mat.reset()
     surface_reset_target()
 
@@ -228,10 +246,9 @@ function update_chunk() {
         }
     )
 
-    var _chunk = global.current_chunk
-    var _left = (_chunk.x - 1) * global.chunk_size
-    var _top = (_chunk.y - 1) * global.chunk_size
-    var _w = global.chunk_size * 4
-    var _h = global.chunk_size * 4
+    var _left = global.cam_x - SCREEN_WIDTH * 2
+    var _top = global.cam_y - SCREEN_WIDTH * 2
+    var _w = SCREEN_WIDTH * 4
+    var _h = SCREEN_WIDTH * 4
     instance_activate_region(_left, _top, _w, _h, true)
 }

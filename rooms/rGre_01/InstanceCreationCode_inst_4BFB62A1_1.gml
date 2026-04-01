@@ -1,0 +1,1 @@
+set_camera(CAMMODE_FOLLOW, 2, 0.15)

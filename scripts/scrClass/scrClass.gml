@@ -1,7 +1,6 @@
 function Vec2(_x, _y) constructor {
 	x = _x
 	y = _y
-	self_id = self
 	
 	// In the case that _y is undefined,
 	// _x is treated as a Vec2
@@ -65,6 +64,15 @@ function Vec2(_x, _y) constructor {
 		return point_direction(0, 0, x, y)
 	}
 
+	static dist = function (_x, _y = undefined) {
+		/// @returns {real}
+		if (_y == undefined) {
+			return point_distance(x, y, _x.x, _x.y)
+		} else {
+			return point_distance(x, y, _x, _y)
+		}
+	}
+
 	static rot = function (_angle) {
 		/// @returns {Vec2} Rotate by _angle (in degrees)
 		var _len = len()
@@ -106,20 +114,19 @@ function Vec2(_x, _y) constructor {
 		return [x, y]
 	}
 
-	static free = function () {
-		/// @returns {none} Destroy this struct
-		delete self_id
-	}
-
 	static copy = function () {
 		/// @returns {Vec2} A copy of this vector
 		return new Vec2(x, y)
+	}
+
+	static free = function () {
+		/// @returns {none} Destroy this struct
+		
 	}
 }
 
 function ShaderOption(_shd) constructor {
 	shd = _shd
-	self_id = self
 	uniforms = new Dict()
 	textures = new Dict()
 	smooth = false
@@ -189,7 +196,6 @@ function ShaderOption(_shd) constructor {
 			shader_reset()
 		delete uniforms
 		delete textures
-		delete self_id
 	}
 
 	static copy = function() {
@@ -504,10 +510,16 @@ function List(_arr = noone) constructor {
 		return self
 	}
 
-	static add = function(_value) {
+	static add = function(_value, _index = -1) {
 		/// @param {any} _value
+		/// @param {real} _index
 		/// @returns {List} self for chaining
-		ds_list_add(list, _value)
+		if (_index >= 0 && _index <= ds_list_size(list)) {
+			ds_list_insert(list, _index, _value)
+		}
+		else {
+			ds_list_add(list, _value)
+		}
 		return self
 	}
 
@@ -636,6 +648,7 @@ function Matrix(_x = 0, _y = 0, _z = 0, _rx = 0, _ry = 0, _rz = 0, _sx = 1, _sy 
 	sy = _sy
 	sz = _sz
 	mat = matrix_build(x, y, z, rx, ry, rz, sx, sy, sz)
+	prev_mat = matrix_build_identity()
 
 	static identify = function() {
 		x = 0
@@ -740,13 +753,14 @@ function Matrix(_x = 0, _y = 0, _z = 0, _rx = 0, _ry = 0, _rz = 0, _sx = 1, _sy 
 		return self;
 	}
 
-	static set = function(_smooth = true, _cull = cull_clockwise) {
+	static set = function() {
+		prev_mat = matrix_get(matrix_world)
 		matrix_set(matrix_world, mat)
 		return self
 	}
 
 	static reset = function() {
-		matrix_set(matrix_world, matrix_build_identity())
+		matrix_set(matrix_world, prev_mat)
 		return self
 	}
 
@@ -792,7 +806,7 @@ function Matrix(_x = 0, _y = 0, _z = 0, _rx = 0, _ry = 0, _rz = 0, _sx = 1, _sy 
 
 function Model(_filename, _tex, _mat = new Matrix(), _model_shader_option = new ModelShaderOption()) constructor {
 	self_id = self
-	model = get_3d_model(_filename)
+	model = get_3d_model("Models/" + _filename)
 	tex = _tex
 	mat = _mat
 	shader_option = _model_shader_option
@@ -852,6 +866,8 @@ function Camera(_index = 0) constructor {
 
 function Path(_path) constructor {
 	path = _path
+	poses = new Dict()
+	dirs = new Dict()
 
 	static len = function() {
 		/// @returns {real} Length of the path
@@ -861,7 +877,15 @@ function Path(_path) constructor {
 	static get_pos = function(_ratio) {
 		/// @param {real} _ratio between 0 and 1 representing the position along the path
 		/// @returns {Struct} A struct {x, y} coordinates of the point at position _ratio along the path
-		return new Vec2(path_get_x(path, _ratio), path_get_y(path, _ratio))
+		var _dist = _ratio * len()
+		if (poses.get(_dist) == undefined) {
+			var _v = new Vec2(path_get_x(path, _ratio), path_get_y(path, _ratio))
+			poses.set(_dist, _v)
+			return _v
+		}
+		else {
+			return poses.get(_dist)
+		}
 	}
 
 	static get_pos_dist = function(_dist) {
@@ -874,11 +898,19 @@ function Path(_path) constructor {
 	static get_dir = function(_ratio, _delta = 0.5) {
 		/// @param {real} _ratio between 0 and 1 representing the position along the path
 		/// @returns {Struct} A struct {x, y} representing the velocity vector at position _ratio along the path
-		var _dist1 = max(_ratio * len() - _delta, 0)
-		var _dist2 = min(_ratio * len() + _delta, len())
-		var _pos1 = get_pos_dist(_dist1)
-		var _pos2 = get_pos_dist(_dist2)
-		return _pos2.subtract(_pos1).normalize()
+		var _dist = _ratio * len()
+		if (dirs.get(_dist) == undefined) {
+			 var _dist1 = max(_dist - _delta, 0)
+			var _dist2 = min(_dist + _delta, len())
+			var _pos1 = get_pos_dist(_dist1)
+			var _pos2 = get_pos_dist(_dist2)
+			var _dir = point_direction(_pos1.x, _pos1.y, _pos2.x, _pos2.y)
+			dirs.set(_dist, _dir)
+			return _dir
+		}
+		else {
+			return dirs.get(_dist)
+		}
 	}
 
 	static get_dir_dist = function(_dist, _delta = 0.5) {
@@ -886,5 +918,136 @@ function Path(_path) constructor {
 		/// @returns {Struct} A struct {x, y} representing the velocity vector at distance _dist along the path
 		var _pos = _dist / len()
 		return get_dir(_pos, _delta)
+	}
+
+	static free = function() {
+		delete poses
+		delete dirs
+	}
+}
+
+function Curve(_curve = undefined, _channel = "default") constructor {
+	curve = _curve
+	default_channel = _channel
+	if (curve == undefined) {
+		curve = animcurve_create()
+		curve.channels = array_create(0)
+		add_channel()
+	}
+
+	static get = function(_t = 0, _channel = default_channel) {
+		var _c = animcurve_get_channel(curve, _channel)
+		if (_c != -1) {
+			return animcurve_channel_evaluate(_c, _t)
+		}
+		else
+			return 0
+	}
+
+	static get_channel = function(_channel) {
+		var _c = animcurve_get_channel(curve, _channel)
+		if (_c != -1) {
+			return _c
+		}
+		else
+			return undefined
+	}
+
+	static add_channel = function(_channel_name = default_channel, _type = animcurvetype_catmullrom, _iter = 8) {
+		_c = animcurve_channel_new()
+		_c.name = _channel_name
+		_c.type = _type
+		_c.iterations = _iter
+		_c.points = array_create(0)
+		array_push(curve.channels, _c)
+		return self
+	}
+
+	static add_point = function(_channel = default_channel, _t = 0, _value = 0) {
+		var _c = get_channel(_channel)
+		if (_c == undefined) {
+			add_channel(_channel)
+			_c = get_channel(_channel)
+		}
+
+		var _p = animcurve_point_new()
+		_p.posx = _t
+		_p.value = _value
+		array_push(_c.points, _p)
+
+		return self
+	}
+}
+
+function Line2D(_list_points, _width = 1, _tex = undefined, _curve = undefined, _channel = "default") constructor {
+	x = 0
+	y = 0
+	width = _width
+	points = _list_points
+	tex = _tex
+	curve = new Curve(_curve, _channel)
+
+	static set_pos = function(_x, _y) {
+		x = _x
+		y = _y
+		return self
+	}
+
+	static set_texture = function(_tex) {
+		tex = _tex
+		return self
+	}
+
+	static set_width = function(_width) {
+		width = _width
+		return self
+	}
+
+	static draw = function() {
+		draw_set_color(c_white)
+		draw_primitive_begin_texture(pr_trianglestrip, tex)
+
+		var _count = points.len()
+		var _total_dist = 0
+		var _distances = array_create(_count, 0)
+		
+		// 1. 전체 거리 계산 (UV 및 Curve 샘플링용)
+		for (var i = 1; i < _count; i++) {
+			_total_dist += points.get(i-1).dist(points.get(i))
+			_distances[i] = _total_dist
+		}
+
+		for (var i = 0; i < _count; i++) {
+			var _p = points.get(i)
+			var _dir = 0
+
+			// 2. 방향 벡터 계산 (시작, 끝, 중간점 처리)
+			if (i == 0) {
+				_dir = point_direction(_p.x, _p.y, points.get(i+1).x, points.get(i+1).y)
+			} else if (i == _count - 1) {
+				_dir = point_direction(points.get(i-1).x, points.get(i-1).y, _p.x, _p.y)
+			} else {
+				// 중간점은 이전 점과 다음 점의 평균 각도 사용
+				var _d1 = point_direction(points.get(i-1).x, points.get(i-1).y, _p.x, _p.y)
+				var _d2 = point_direction(_p.x, _p.y, points.get(i+1).x, points.get(i+1).y)
+				_dir = _d1 + angle_difference(_d2, _d1) * 0.5
+			}
+
+			// 3. 법선 벡터(90도 회전) 및 너비 계산
+			var _nx = lengthdir_x(1, _dir + 90)
+			var _ny = lengthdir_y(1, _dir + 90)
+			
+			var _progress = _distances[i] / _total_dist // 0.0 ~ 1.0
+			var _curve_val = curve.get(_progress)
+			var _half_w = (width * _curve_val) * 0.5
+
+			// 4. 정점 추가 (Triangle Strip)
+			// 왼쪽 정점 (V = 0)
+			draw_vertex_texture(x + _p.x + _nx * _half_w, y + _p.y + _ny * _half_w, _progress, 0)
+			// 오른쪽 정점 (V = 1)
+			draw_vertex_texture(x + _p.x - _nx * _half_w, y + _p.y - _ny * _half_w, _progress, 1)
+		}
+
+		draw_primitive_end()
 	}
 }

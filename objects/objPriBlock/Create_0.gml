@@ -3,11 +3,23 @@ event_inherited()
 sprite_index = sprPriBlock
 
 function draw_front() {
+	if (visible) {
+		_draw_front()
+	}
+}
+
+function draw_back() {
+	if (visible) {
+		_draw_back()
+	}
+}
+
+function _draw_front() {
 	image_blend = PRI_FRONT_COLOR
 	draw_self()
 }
 
-function draw_back() {
+function _draw_back() {
 	image_blend = PRI_BACK_COLOR
 	draw_self()
 }

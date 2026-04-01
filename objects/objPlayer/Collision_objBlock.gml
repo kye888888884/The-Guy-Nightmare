@@ -17,3 +17,6 @@ else if (_floor_angle > FLOOR_MAX_ANGLE) {
 else { // on floor
     on_floor = true
 }
+
+phy_position_x = round(phy_position_x)
+phy_position_y = round(phy_position_y)
